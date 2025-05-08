@@ -7,24 +7,24 @@ namespace Application.Services.Rastraunts;
 
 public interface IRastrauntService
 {
-    Task<Restraunt?> GetAsync(
-        Expression<Func<Restraunt, bool>> predicate,
-        Func<IQueryable<Restraunt>, IIncludableQueryable<Restraunt, object>>? include = null,
+    Task<Restaurant?> GetAsync(
+        Expression<Func<Restaurant, bool>> predicate,
+        Func<IQueryable<Restaurant>, IIncludableQueryable<Restaurant, object>>? include = null,
         bool withDeleted = false,
         bool enableTracking = true,
         CancellationToken cancellationToken = default
     );
-    Task<IPaginate<Restraunt>?> GetListAsync(
-        Expression<Func<Restraunt, bool>>? predicate = null,
-        Func<IQueryable<Restraunt>, IOrderedQueryable<Restraunt>>? orderBy = null,
-        Func<IQueryable<Restraunt>, IIncludableQueryable<Restraunt, object>>? include = null,
+    Task<IPaginate<Restaurant>?> GetListAsync(
+        Expression<Func<Restaurant, bool>>? predicate = null,
+        Func<IQueryable<Restaurant>, IOrderedQueryable<Restaurant>>? orderBy = null,
+        Func<IQueryable<Restaurant>, IIncludableQueryable<Restaurant, object>>? include = null,
         int index = 0,
         int size = 10,
         bool withDeleted = false,
         bool enableTracking = true,
         CancellationToken cancellationToken = default
     );
-    Task<Restraunt> AddAsync(Restraunt rastraunt);
-    Task<Restraunt> UpdateAsync(Restraunt rastraunt);
-    Task<Restraunt> DeleteAsync(Restraunt rastraunt, bool permanent = false);
+    Task<Restaurant> AddAsync(Restaurant rastraunt);
+    Task<Restaurant> UpdateAsync(Restaurant rastraunt);
+    Task<Restaurant> DeleteAsync(Restaurant rastraunt, bool permanent = false);
 }

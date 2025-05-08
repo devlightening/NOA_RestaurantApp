@@ -27,7 +27,7 @@ public class DeleteRastrauntCommand : IRequest<DeletedRastrauntResponse>
 
         public async Task<DeletedRastrauntResponse> Handle(DeleteRastrauntCommand request, CancellationToken cancellationToken)
         {
-            Restraunt? rastraunt = await _rastrauntRepository.GetAsync(predicate: r => r.Id == request.Id, cancellationToken: cancellationToken);
+            Restaurant? rastraunt = await _rastrauntRepository.GetAsync(predicate: r => r.Id == request.Id, cancellationToken: cancellationToken);
             await _rastrauntBusinessRules.RastrauntShouldExistWhenSelected(rastraunt);
 
             await _rastrauntRepository.DeleteAsync(rastraunt!);

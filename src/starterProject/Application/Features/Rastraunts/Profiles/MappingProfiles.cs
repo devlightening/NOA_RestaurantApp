@@ -14,14 +14,14 @@ public class MappingProfiles : Profile
 {
     public MappingProfiles()
     {
-        CreateMap<Restraunt, CreateRastrauntCommand>().ReverseMap();
-        CreateMap<Restraunt, CreatedRastrauntResponse>().ReverseMap();
-        CreateMap<Restraunt, UpdateRastrauntCommand>().ReverseMap();
-        CreateMap<Restraunt, UpdatedRastrauntResponse>().ReverseMap();
-        CreateMap<Restraunt, DeleteRastrauntCommand>().ReverseMap();
-        CreateMap<Restraunt, DeletedRastrauntResponse>().ReverseMap();
-        CreateMap<Restraunt, GetByIdRastrauntResponse>().ReverseMap();
-        CreateMap<Restraunt, GetListRastrauntListItemDto>().ReverseMap();
-        CreateMap<IPaginate<Restraunt>, GetListResponse<GetListRastrauntListItemDto>>().ReverseMap();
+        CreateMap<Restaurant, CreateRastrauntCommand>().ReverseMap();
+        CreateMap<Restaurant, CreatedRastrauntResponse>().ReverseMap();
+        CreateMap<Restaurant, UpdateRastrauntCommand>().ReverseMap();
+        CreateMap<Restaurant, UpdatedRastrauntResponse>().ReverseMap();
+        CreateMap<Restaurant, DeleteRastrauntCommand>().ReverseMap();
+        CreateMap<Restaurant, DeletedRastrauntResponse>().ReverseMap();
+        CreateMap<Restaurant, GetByIdRastrauntResponse>().ReverseMap();
+        CreateMap<Restaurant, GetListRastrauntListItemDto>().ReverseMap();
+        CreateMap<IPaginate<Restaurant>, GetListResponse<GetListRastrauntListItemDto>>().ReverseMap();
     }
 }

@@ -3,6 +3,6 @@ using NArchitecture.Core.Persistence.Repositories;
 
 namespace Application.Services.Repositories;
 
-public interface IRastrauntRepository : IAsyncRepository<Restraunt, Guid>, IRepository<Restraunt, Guid>
+public interface IRastrauntRepository : IAsyncRepository<Restaurant, Guid>, IRepository<Restaurant, Guid>
 {
 }

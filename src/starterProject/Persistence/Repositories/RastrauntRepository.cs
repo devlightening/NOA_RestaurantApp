@@ -5,7 +5,7 @@ using Persistence.Contexts;
 
 namespace Persistence.Repositories;
 
-public class RastrauntRepository : EfRepositoryBase<Restraunt, Guid, BaseDbContext>, IRastrauntRepository
+public class RastrauntRepository : EfRepositoryBase<Restaurant, Guid, BaseDbContext>, IRastrauntRepository
 {
     public RastrauntRepository(BaseDbContext context) : base(context)
     {

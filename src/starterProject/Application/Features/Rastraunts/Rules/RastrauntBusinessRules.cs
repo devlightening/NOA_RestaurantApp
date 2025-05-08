@@ -24,7 +24,7 @@ public class RastrauntBusinessRules : BaseBusinessRules
         throw new BusinessException(message);
     }
 
-    public async Task RastrauntShouldExistWhenSelected(Restraunt? rastraunt)
+    public async Task RastrauntShouldExistWhenSelected(Restaurant? rastraunt)
     {
         if (rastraunt == null)
             await throwBusinessException(RastrauntsBusinessMessages.RastrauntNotExists);
@@ -32,7 +32,7 @@ public class RastrauntBusinessRules : BaseBusinessRules
 
     public async Task RastrauntIdShouldExistWhenSelected(Guid id, CancellationToken cancellationToken)
     {
-        Restraunt? rastraunt = await _rastrauntRepository.GetAsync(
+        Restaurant? rastraunt = await _rastrauntRepository.GetAsync(
             predicate: r => r.Id == id,
             enableTracking: false,
             cancellationToken: cancellationToken

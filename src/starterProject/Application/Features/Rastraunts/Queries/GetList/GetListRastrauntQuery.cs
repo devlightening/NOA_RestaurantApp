@@ -25,7 +25,7 @@ public class GetListRastrauntQuery : IRequest<GetListResponse<GetListRastrauntLi
 
         public async Task<GetListResponse<GetListRastrauntListItemDto>> Handle(GetListRastrauntQuery request, CancellationToken cancellationToken)
         {
-            IPaginate<Restraunt> rastraunts = await _rastrauntRepository.GetListAsync(
+            IPaginate<Restaurant> rastraunts = await _rastrauntRepository.GetListAsync(
                 index: request.PageRequest.PageIndex,
                 size: request.PageRequest.PageSize, 
                 cancellationToken: cancellationToken

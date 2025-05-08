@@ -25,7 +25,7 @@ public class GetByIdRastrauntQuery : IRequest<GetByIdRastrauntResponse>
 
         public async Task<GetByIdRastrauntResponse> Handle(GetByIdRastrauntQuery request, CancellationToken cancellationToken)
         {
-            Restraunt? rastraunt = await _rastrauntRepository.GetAsync(predicate: r => r.Id == request.Id, cancellationToken: cancellationToken);
+            Restaurant? rastraunt = await _rastrauntRepository.GetAsync(predicate: r => r.Id == request.Id, cancellationToken: cancellationToken);
             await _rastrauntBusinessRules.RastrauntShouldExistWhenSelected(rastraunt);
 
             GetByIdRastrauntResponse response = _mapper.Map<GetByIdRastrauntResponse>(rastraunt);

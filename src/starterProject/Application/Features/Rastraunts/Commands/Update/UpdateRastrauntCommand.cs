@@ -29,7 +29,7 @@ public class UpdateRastrauntCommand : IRequest<UpdatedRastrauntResponse>
 
         public async Task<UpdatedRastrauntResponse> Handle(UpdateRastrauntCommand request, CancellationToken cancellationToken)
         {
-            Restraunt? rastraunt = await _rastrauntRepository.GetAsync(predicate: r => r.Id == request.Id, cancellationToken: cancellationToken);
+            Restaurant? rastraunt = await _rastrauntRepository.GetAsync(predicate: r => r.Id == request.Id, cancellationToken: cancellationToken);
             await _rastrauntBusinessRules.RastrauntShouldExistWhenSelected(rastraunt);
             rastraunt = _mapper.Map(request, rastraunt);
 

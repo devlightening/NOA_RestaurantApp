@@ -28,7 +28,7 @@ public class CreateRastrauntCommand : IRequest<CreatedRastrauntResponse>
 
         public async Task<CreatedRastrauntResponse> Handle(CreateRastrauntCommand request, CancellationToken cancellationToken)
         {
-            Restraunt rastraunt = _mapper.Map<Restraunt>(request);
+            Restaurant rastraunt = _mapper.Map<Restaurant>(request);
 
             await _rastrauntRepository.AddAsync(rastraunt);
 

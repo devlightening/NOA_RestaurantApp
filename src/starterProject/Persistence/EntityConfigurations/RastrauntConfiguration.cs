@@ -4,9 +4,9 @@ using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace Persistence.EntityConfigurations;
 
-public class RastrauntConfiguration : IEntityTypeConfiguration<Restraunt>
+public class RastrauntConfiguration : IEntityTypeConfiguration<Restaurant>
 {
-    public void Configure(EntityTypeBuilder<Restraunt> builder)
+    public void Configure(EntityTypeBuilder<Restaurant> builder)
     {
         builder.ToTable("Rastraunts").HasKey(r => r.Id);
 
